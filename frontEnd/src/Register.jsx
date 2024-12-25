@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import './styles.css';
+
 
 function Register() {
     const [name, setName] = useState('');
@@ -18,7 +18,6 @@ function Register() {
                 password
             });
             setMessage(response.data.message);
-            // Clear fields
             setName('');
             setEmail('');
             setPassword('');
