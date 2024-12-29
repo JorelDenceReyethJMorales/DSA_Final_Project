@@ -1,8 +1,9 @@
 import React from 'react';
 import './App.css';
 import CreateCharacter from './CreateCharacter';
+
 function App() {
-    return (
+    return (    
         <div>
             <CreateCharacter />
         </div>

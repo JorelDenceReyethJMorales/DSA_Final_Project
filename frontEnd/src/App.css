@@ -1,62 +1,173 @@
+/* General styles */
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Arial', sans-serif;
   margin: 0;
   padding: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  background-color: #f4f4f9;
+  background-color: #121212; /* Darker background for a more immersive theme */
+  color: #e0e0e0; /* Light text color for readability */
 }
 
+.title {
+  font-size: 36px; /* Large title */
+  font-weight: bold;
+  color: #ffffff;
+  text-align: center;
+  margin-bottom: 30px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
+}
+
+/* Container for the form */
 .container {
+  max-width: 600px;
+  margin: 50px auto;
   padding: 30px;
   border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  max-width: 400px;
-  width: 100%;
-  transition: background-color 0.3s ease-in-out;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7);
+  background-color: #1e1e1e;
 }
 
+/* Headings */
 h1 {
   text-align: center;
-  margin-bottom: 20px;
-  color: #333;
+  color: #ffffff;
+  font-size: 24px;
 }
 
-label {
-  display: block;
-  margin: 10px 0 5px;
-  font-weight: bold;
-}
-
+/* Radio button group */
 .radio-group {
   display: flex;
-  justify-content: space-around;
-  margin-bottom: 20px;
+  justify-content: space-between;
+  margin: 20px 0;
 }
 
+.radio-group input {
+  display: none;
+}
+
+.radio-group label {
+  cursor: pointer;
+  font-size: 24px;
+  font-weight: bold;
+  color: #f0f0f0;
+  padding: 12px 20px;
+  border-radius: 5px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.radio-group label:hover {
+  background-color: #3a3a3a;
+  color: #ffffff;
+}
+
+.radio-group input[type="radio"]:checked + label {
+  background-color: #2a2a2a;
+  color: white;
+}
+
+/* Stats container */
+.stats-container {
+  margin-top: 20px;
+  padding: 15px;
+  border: 1px solid #666;
+  border-radius: 8px;
+  background-color: #2a2a2a;
+}
+
+h3.Reminder {
+  text-align: center;
+  color: #d0d0d0;
+  font-style: italic;
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+/* Stat buttons */
+.stat-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px 0;
+}
+
+.stat-button {
+  background-color: #9da5ad;
+  color: white;
+  border: none;
+  padding: 12px;
+  font-size: 18px;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+  margin: 0 5px;
+}
+
+.stat-button:hover {
+  background-color: #7e868f;
+  transform: scale(1.1);
+}
+
+.stat-button:last-child {
+  background-color: #9da5ad;
+}
+
+.stat-button:last-child:hover {
+  background-color: #7e868f;
+  transform: scale(1.1);
+  box-shadow: 0 0 15px rgb(255, 255, 255);
+}
+
+/* Stat values */
+.stat-buttons span {
+  margin: 0 10px;
+  font-size: 20px;
+  color: #f0f0f0;
+}
+
+/* Text inputs */
 input[type="text"] {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 15px;
-  border: 1px solid #ddd;
-  border-radius: 4px;
+  width: calc(100% - 20px);
+  padding: 12px;
+  margin: 10px 0;
+  border: 1px solid #555;
+  border-radius: 5px;
+  background-color: #333;
+  color: #ffffff;
   font-size: 16px;
 }
 
+input[type="text"]:focus {
+  border-color: #000000;
+  outline: none;
+}
+
+/* Submit button */
 button {
   width: 100%;
-  padding: 10px;
-  background-color: #007bff;
-  color: #fff;
-  font-size: 16px;
+  margin-top: 20px;
+  padding: 12px;
+  background-color: #333;
+  color: white;
   border: none;
-  border-radius: 4px;
+  border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s;
+  font-size: 16px;
 }
 
 button:hover {
-  background-color: #0056b3;
+  background-color: #4f5250;
+}
+
+/* Small text reminders */
+.statsReminder {
+  color: #b0b0b0;
+  font-size: 14px;
+  text-align: center;
+  margin-top: 10px;
 }
